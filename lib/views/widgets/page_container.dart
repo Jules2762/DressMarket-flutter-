@@ -11,10 +11,8 @@ class PageContainer extends StatelessWidget{
         vertical: 10,
         horizontal: 15
       ),
-      decoration: BoxDecoration(
-        color: ThemeColor.primarySurface
-      )
-      ,child: 
+    
+      child: 
     ListView(
       scrollDirection: Axis.vertical,
       children: [

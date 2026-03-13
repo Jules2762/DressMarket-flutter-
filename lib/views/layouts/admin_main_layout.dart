@@ -2,17 +2,18 @@ import 'package:dress_market/views/screens/client/cart/cart_page.dart';
 import 'package:dress_market/views/screens/client/home/home_page.dart';
 import 'package:dress_market/views/screens/client/order/order_page.dart';
 import 'package:dress_market/views/screens/client/shop/shop_page.dart';
-import 'package:dress_market/views/widgets/custom_drawer.dart';
+import 'package:dress_market/views/widgets/admin/admin_custom_drawer.dart';
+
 import 'package:flutter/material.dart';
 
 
-class MainLayout extends StatefulWidget {
-  const MainLayout({super.key});
+class AdminMainLayout extends StatefulWidget {
+  const AdminMainLayout({super.key});
   @override
-  State<MainLayout> createState() => _MainLayoutState();
+  State<AdminMainLayout> createState() => _MainLayoutState();
 }
 
-class _MainLayoutState extends State<MainLayout> {
+class _MainLayoutState extends State<AdminMainLayout> {
   int _currentIndex = 0;
   final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey();
   final List<Widget> _pages = [
@@ -54,7 +55,7 @@ class _MainLayoutState extends State<MainLayout> {
           ),
         ],
       ),
-      drawer: CustomDrawer(),
+      drawer: AdminCustomDrawer(),
       body: IndexedStack(index: _currentIndex, children: _pages),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
