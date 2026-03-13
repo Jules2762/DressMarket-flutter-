@@ -43,7 +43,7 @@ lib/
 Clone the repository:
 
 ```bash
-git clone [<repo_url>](https://github.com/Jules2762/DressMarket-flutter-.git)
+git clone https://github.com/Jules2762/DressMarket-flutter-.git
 ```
 
 Install dependencies:
