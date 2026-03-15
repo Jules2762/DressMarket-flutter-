@@ -4,7 +4,9 @@ import 'package:dress_market/views/screens/client/home/widgets/section_container
 import 'package:dress_market/views/screens/client/home/widgets/section_item.dart';
 
 import 'package:dress_market/views/widgets/page_container.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -69,21 +71,93 @@ class _HomePageState extends State<HomePage> {
             title: "Featured Collections",
             onPressed: () {},
             children: [
-              SectionItem(collectionName: "collectionName", imagePath: "assets/images/femal_fashion.jpg"),
-              SectionItem(collectionName: "collectionName", imagePath: "assets/images/femal_fashion.jpg"),
-              SectionItem(collectionName: "collectionName", imagePath: "assets/images/femal_fashion.jpg"),
-              SectionItem(collectionName: "collectionName", imagePath: "assets/images/femal_fashion.jpg"),
+              SectionItem(
+                collectionName: "collectionName",
+                imagePath: "assets/images/femal_fashion.jpg",
+              ),
+              SectionItem(
+                collectionName: "collectionName",
+                imagePath: "assets/images/femal_fashion.jpg",
+              ),
+              SectionItem(
+                collectionName: "collectionName",
+                imagePath: "assets/images/femal_fashion.jpg",
+              ),
+              SectionItem(
+                collectionName: "collectionName",
+                imagePath: "assets/images/femal_fashion.jpg",
+              ),
             ],
           ),
           SectionContainer(
-            title: "Featured Collections",
+            title: "Editor's choice",
             onPressed: () {},
             children: [
-              SectionItem(collectionName: "collectionName", imagePath: "assets/images/femal_fashion.jpg"),
-              SectionItem(collectionName: "collectionName", imagePath: "assets/images/femal_fashion.jpg"),
-              SectionItem(collectionName: "collectionName", imagePath: "assets/images/femal_fashion.jpg"),
-              SectionItem(collectionName: "collectionName", imagePath: "assets/images/femal_fashion.jpg"),
+              SectionItem(
+                collectionName: "collectionName",
+                imagePath: "assets/images/femal_fashion.jpg",
+              ),
+              SectionItem(
+                collectionName: "collectionName",
+                imagePath: "assets/images/femal_fashion.jpg",
+              ),
+              SectionItem(
+                collectionName: "collectionName",
+                imagePath: "assets/images/femal_fashion.jpg",
+              ),
+              SectionItem(
+                collectionName: "collectionName",
+                imagePath: "assets/images/femal_fashion.jpg",
+              ),
             ],
+          ),
+          Container(
+            height: 250,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor.withValues(alpha: 0.2),
+              border: BoxBorder.all(
+                color: Theme.of(context).primaryColor.withValues(alpha: 0.5),
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+
+            child: Column(
+              spacing: 10,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "The DressMarket journal",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                Text("Insider access to luxury trends and private sales."),
+                SizedBox(
+                  width: 350,
+                  child: CupertinoTextField(
+                    placeholder: "Your email address",
+                    prefix: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 7),
+                      child: Icon(
+                        Icons.email,
+                        color: Theme.of(
+                          context,
+                        ).primaryColor.withValues(alpha: 0.5),
+                      ),
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "SUSCRIBE",
+                    style: GoogleFonts.playfairDisplay(
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
